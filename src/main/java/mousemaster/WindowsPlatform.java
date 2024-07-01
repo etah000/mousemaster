@@ -238,8 +238,7 @@ public class WindowsPlatform implements Platform {
                             // Consider altgr's leftctrl and altgr's rightalt as the same key: Key.rightalt.
                             key = Key.rightalt;
                         else
-                            key = WindowsVirtualKey.keyFromWindowsEvent(
-                                    WindowsVirtualKey.values.get(info.vkCode),
+                            key = WindowsVirtualKey.keyFromWindowsEvent(WindowsVirtualKey.values.get(info.vkCode),
                                     info.scanCode, info.flags);
                         if (key != null) {
                             Instant time = systemStartTime.plusMillis(info.time);
