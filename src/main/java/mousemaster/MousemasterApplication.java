@@ -27,7 +27,7 @@ public class MousemasterApplication {
                                        .map(arg -> arg.split("=")[1])
                                        .findFirst()
                                        .map(Paths::get)
-                                       .orElse(Paths.get("mousemaster.properties"));
+                                       .orElse(Paths.get("configuration/warpd.properties"));
         if (Stream.of(args).anyMatch(Predicate.isEqual(("--graalvm-agent-run")))) {
             logger.info("--graalvm-agent-run flag found, exiting in 20s");
             new Thread(() -> {
